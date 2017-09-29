@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/rg'
 require_relative '../pet_shop'
 
 class TestPetShop < Minitest::Test
@@ -26,7 +27,7 @@ class TestPetShop < Minitest::Test
           }
 
     @pet_shop = {
-        pets: [
+        pets: [  # Array of hashes within hash 
           {
             name: "Sir Percy",
             pet_type: :cat,
