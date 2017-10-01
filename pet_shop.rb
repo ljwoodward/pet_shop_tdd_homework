@@ -70,3 +70,12 @@ def customer_can_afford_pet(customer, pet)
   else return false
   end
 end
+
+def sell_pet_to_customer(pet_shop, pet_name, customer_name)
+  for pets in pet_shop[:pets]
+    if pets[:name] == pet_name # && customer_can_afford_pet(customer_name, pet_name) == true)
+          add_pet_to_customer(customer_name, pet_name)
+          increase_pets_sold(pet_shop, 1)
+    end
+  end
+end
